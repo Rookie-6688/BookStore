@@ -1,0 +1,76 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: book_route
+          uri: lb://book        #所有/api/product/**的服务都负载均衡到gulimall-product的项目中
+          predicates:
+            - Path=/api/book/book/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: user_route
+          uri: lb://user        #所有/api/product/**的服务都负载均衡到gulimall-product的项目中
+          predicates:
+            - Path=/api/book/user/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: admin_route
+          uri: lb://admin        #所有/api/product/**的服务都负载均衡到gulimall-product的项目中
+          predicates:
+            - Path=/api/book/admin/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: category_route
+          uri: lb://category
+          predicates:
+            - Path=/api/book/category/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: third_route
+          uri: lb://third-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/thirdparty/(?<segment>.*),/$\{segment}
+
+        - id: cartitem_route
+          uri: lb://cartitem
+          predicates:
+            - Path=/api/book/cartitem/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: order_route
+          uri: lb://order
+          predicates:
+            - Path=/api/book/order/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: orderitem_route
+          uri: lb://orderitem
+          predicates:
+            - Path=/api/book/orderitem/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+        - id: user_route
+          uri: lb://user
+          predicates:
+            - Path=/api/book/user/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+
+
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**        #url以/api/开头的会去注册中心查找renren-fast的端口路径进行访问
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}          #修改端口号后面的部分，这里是添加renren-fast
+#            前段项目用url以/api开头
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Book" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cartitem" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Category" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/OrderItem" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Thirdparty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Thirtyparty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/renren-fast" charset="UTF-8" />
+  </component>
+</project>
